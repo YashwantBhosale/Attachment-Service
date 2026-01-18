@@ -98,3 +98,7 @@ curl -X PATCH http://localhost:5000/api/documents/<documentId>/status \
 
 ## Smoke testing
 - A scripted client exercises uploads/streams/status flows in [tests/test-api.js](tests/test-api.js#L1-L143); run with `node tests/test-api.js` while the server is up.
+
+
+## About the author
+Made with ❤️ by [Yashwant Bhosale](https://github.com/YashwantBhosale).
