@@ -1,6 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/connectDB');
+const documentRoutes = require('./routes/documentRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 dotenv.config();
 
@@ -18,6 +20,8 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+app.use('/api/documents', documentRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Modular Attachment Service API');
